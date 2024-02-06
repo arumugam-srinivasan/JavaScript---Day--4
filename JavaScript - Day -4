@@ -1,0 +1,72 @@
+Print odd numbers in an array
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+(arr => {
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] % 2 !== 0) {
+      console.log(arr[i]);
+    }
+  }
+})(array);
+
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+(function(arr) {
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] % 2 !== 0) {
+      console.log(arr[i]);
+    }
+  }
+})(array);
+
+
+
+let stringArray = ['hello world', 'good morning', 'javascript is fun'];
+
+let titleCasedArray = stringArray.map(function(str) {
+  return str.replace(/\b\w/g, function(l) {
+    return l.toUpperCase();
+  });
+});
+
+console.log(titleCasedArray);
+
+
+let stringArray = ['hello world', 'good morning', 'javascript is fun'];
+
+let titleCasedArray = (function(arr) {
+  let result = [];
+  for(let i = 0; i < arr.length; i++) {
+    result.push(arr[i].replace(/\b\w/g, function(l) {
+      return l.toUpperCase();
+    }));
+  }
+  return result;
+})(stringArray);
+
+console.log(titleCasedArray);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
